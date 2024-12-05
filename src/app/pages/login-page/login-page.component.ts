@@ -19,8 +19,9 @@ export class LoginPageComponent {
 
   async login(){
     const login: boolean = await this.checkUserCredentials(this.name, this.password)
-    console.log(login);
-    this._router.navigate(['/admin-page']);
+    if (login) {
+      this._router.navigate(['/admin-page']);
+    }
   }
 
   private async checkUserCredentials(name: string, password: string): Promise<boolean> {
