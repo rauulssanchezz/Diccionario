@@ -20,7 +20,14 @@ export class AdminPageComponent {
 
   async validation(){
     this.invalid = false;
-    if(this.word === '' || this.mean === ''){
+    if(this.word === '' ||
+         this.mean === '' ||
+         this.word === null ||
+         this.mean === null ||
+         this.word === undefined ||
+         this.mean === undefined ||
+        this.word === ' ' ||
+        this.mean === ' '){
       this.errorMessage = 'Please fill in all fields';
       this.invalid = true;
       return;
