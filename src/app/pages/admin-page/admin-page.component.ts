@@ -20,12 +20,13 @@ export class AdminPageComponent {
 
   async validation(){
     this.invalid = false;
+    this.word = this.word.toLowerCase().trim();
+    this.mean = this.mean.trim();
     if(this.word === '' || this.mean === '' || this.word === ' ' || this.mean === ' '){
       this.errorMessage = 'Please fill in all fields';
       this.invalid = true;
       return;
     } else {
-      this.word.toLowerCase();
       await this.saveWord(this.word, this.mean);
       this.word = '';
       this.mean = '';
