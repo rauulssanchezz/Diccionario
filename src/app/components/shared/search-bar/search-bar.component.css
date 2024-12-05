@@ -1,0 +1,19 @@
+.input-group {
+  max-width: 40%; /* Ancho máximo de la barra */
+  margin: 0 auto; /* Centrar en la pantalla */
+}
+
+.input-group .form-control {
+  border-right: 0; /* Quita borde del lado derecho del campo */
+}
+
+.input-group .btn {
+  border-left: 0; /* Quita borde del lado izquierdo del botón */
+}
+
+
+@media (max-width: 600px) {
+  .container{
+    width: 100%;
+  }
+}

@@ -1,1 +1,17 @@
-<p>search-bar works!</p>
+<div class="container mt-4">
+  <form (ngSubmit)="searchWord()" class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Buscar..."
+      aria-label="Buscar"
+      aria-describedby="search-button"
+      [(ngModel)]="search"
+      name="search"
+      required
+    />
+    <button class="btn btn-primary" type="submit" id="search-button">
+      <i class="bi bi-search"></i>
+    </button>
+  </form>
+</div>

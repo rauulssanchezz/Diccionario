@@ -1,1 +1,11 @@
-<p>header works!</p>
+<header>
+  <div class="container">
+    <div class="title-container">
+      <h1 [routerLink]="['']">Forrest Dictionary</h1>
+      <img src="forrest.png">
+    </div>
+    <div class="nav-container">
+      <img [routerLink]="['/login-page']" routerLinkActive="router-link-active"  src="user.png">
+    </div>
+  </div>
+</header>

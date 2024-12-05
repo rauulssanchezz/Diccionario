@@ -1,0 +1,43 @@
+main{
+  margin-top: 10%;
+}
+
+
+@media (max-width: 900px) {
+  main{
+    margin-top: 15%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  main{
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 470px) {
+  main{
+    margin-top: 30%;
+  }
+}
+
+@media (max-width: 340px) {
+  main{
+    margin-top: 35%;
+  }
+}
+
+
+@media (max-width: 340px) {
+  main{
+    margin-top: 40%;
+  }
+}
+
+
+@media (max-width: 250px) {
+  main{
+    margin-top: 50%;
+  }
+}
