@@ -25,6 +25,7 @@ export class AdminPageComponent {
       this.invalid = true;
       return;
     } else {
+      this.word.toLowerCase();
       await this.saveWord(this.word, this.mean);
       this.word = '';
       this.mean = '';
