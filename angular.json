@@ -16,6 +16,7 @@
             "outputPath": "dist/diccionario",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/diccionario/",
             "polyfills": [
               "zone.js"
             ],
