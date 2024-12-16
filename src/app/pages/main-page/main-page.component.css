@@ -28,7 +28,8 @@ strong {
   border-radius: 10px;
   background-color: #f8f9fa;
   height: 100%;
-  margin-top: 5%;
+  box-shadow: #333 0px 0px 10px;
+  margin: 5% 10%;
 }
 
 .error{

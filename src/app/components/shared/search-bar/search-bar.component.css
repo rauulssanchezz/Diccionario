@@ -1,14 +1,14 @@
 .input-group {
-  max-width: 40%; /* Ancho máximo de la barra */
-  margin: 0 auto; /* Centrar en la pantalla */
+  max-width: 60%;
+  margin: 0 auto;
 }
 
 .input-group .form-control {
-  border-right: 0; /* Quita borde del lado derecho del campo */
+  border-right: 0;
 }
 
 .input-group .btn {
-  border-left: 0; /* Quita borde del lado izquierdo del botón */
+  border-left: 0;
 }
 
 

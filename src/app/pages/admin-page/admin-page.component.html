@@ -1,8 +1,8 @@
 <div class="container d-flex justify-content-center align-items-center">
-  <div class="card shadow-sm" style="width: 500px; padding: 20px;">
+  <section class="card shadow-sm" style="width: 500px; padding: 20px;">
     <h2 class="text-center mb-4">Agregar Palabra y Significado</h2>
     <form (ngSubmit)="validation()">
-      <div class="mb-3">
+      <article class="mb-3">
         <label for="word" class="form-label">Palabra</label>
         <input
           type="text"
@@ -14,8 +14,8 @@
           [ngClass]="{'is-invalid': invalid}"
           required
         >
-      </div>
-      <div class="mb-3">
+      </article>
+      <article class="mb-3">
         <label for="meaning" class="form-label">Significado</label>
         <textarea
           class="form-control"
@@ -27,11 +27,11 @@
           [ngClass]="{'is-invalid': invalid}"
           required
         ></textarea>
-      </div>
+      </article>
       <div class="alert" *ngIf="invalid">
         {{ errorMessage}}
       </div>
       <button type="submit" class="btn btn-primary w-100">Guardar</button>
     </form>
-  </div>
+  </section>
 </div>
