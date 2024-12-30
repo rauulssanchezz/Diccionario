@@ -1,8 +1,8 @@
 <div class="container d-flex justify-content-center align-items-center">
-  <section class="card shadow-sm" style="width: 400px; padding: 20px;">
+  <div class="card shadow-sm" style="width: 400px; padding: 20px;">
     <h2 class="text-center mb-4">Iniciar Sesión</h2>
     <form (ngSubmit)="login()">
-      <article class="mb-3">
+      <div class="mb-3">
         <label for="name" class="form-label">Nombre de Usuario</label>
         <input
           type="text"
@@ -13,8 +13,8 @@
           name="name"
           required
         >
-      </article>
-      <article class="mb-3">
+      </div>
+      <div class="mb-3">
         <label for="password" class="form-label">Contraseña</label>
         <input
           type="password"
@@ -25,8 +25,8 @@
           name="password"
           required
         >
-      </article>
+      </div>
       <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
     </form>
-  </section>
+  </div>
 </div>

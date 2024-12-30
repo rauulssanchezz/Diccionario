@@ -1,14 +1,14 @@
 <app-search-bar (searchEmitter)="searchInput($event)"></app-search-bar>
-<section class="words-container" *ngFor="let letter of groupedWordsMap | keyvalue">
-  <article *ngIf="show" class="section">
+<div class="words-container" *ngFor="let letter of groupedWordsMap | keyvalue">
+  <div *ngIf="show" class="section">
     <h3>{{ letter.key }}</h3>
     <ul>
       <li *ngFor="let word of letter.value | keyvalue">
         <strong>{{ word.key }}</strong>: {{ word.value }}
       </li>
     </ul>
-  </article>
-  <article class="error" *ngIf="!show">
+  </div>
+  <div class="error" *ngIf="!show">
     <h2>No se encuentran resultados</h2>
-  </article>
-</section>
+  </div>
+</div>

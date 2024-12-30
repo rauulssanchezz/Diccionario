@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { ReloadWordsService } from './services/reloadWords.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,13 @@ import { HeaderComponent } from './components/shared/header/header.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(private reloadWordsService: ReloadWordsService){}
   title = 'Diccionario';
+  @Output() titleClicked = new EventEmitter<boolean>();
+
+  onTitleClicked(event:boolean){
+    if(event){
+      this.reloadWordsService.loadEmitt();
+    }
+  }
 }

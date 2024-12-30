@@ -1,8 +1,9 @@
 import { NgFor, CommonModule, NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ref, get } from 'firebase/database';
 import { SearchBarComponent } from '../../components/shared/search-bar/search-bar.component';
 import { db } from '../../../../firebase-config';
+import { ReloadWordsService } from '../../services/reloadWords.service';
 
 @Component({
   selector: 'app-main-page',
@@ -12,10 +13,23 @@ import { db } from '../../../../firebase-config';
   styleUrl: './main-page.component.css'
 })
 export class MainPageComponent {
+  constructor(private reloadWordsService: ReloadWordsService) {
+    this.reloadSubscription = this.reloadWordsService.getLoad().subscribe(() => {
+      this.search='';
+      this.loadWords();
+    });
+  }
   search: string = '';
   wordsMap: Map<string, string> = new Map();
   groupedWordsMap: { [letter: string]: { [word: string]: string } } = {};
   show: boolean = true;
+  private reloadSubscription: any;
+
+  ngOnDestroy(): void {
+    if (this.reloadSubscription) {
+      this.reloadSubscription.unsubscribe();
+    }
+  }
 
   searchInput(event: string) {
     this.show = true;
@@ -25,8 +39,6 @@ export class MainPageComponent {
   }
 
   ngAfterContentInit(): void {
-    //Called after ngOnInit when the component's or directive's content has been initialized.
-    //Add 'implements AfterContentInit' to the class.
     this.loadWords();
   }
 
@@ -99,11 +111,10 @@ export class MainPageComponent {
   filterWords(words: { [key: string]: { word: string, mean: string } }, searchTerm: string) {
     const filtered: { [key: string]: { word: string, mean: string } } = {};
 
-    // Recorremos todas las palabras y las comparamos con el término de búsqueda
     Object.keys(words).forEach(key => {
       const wordObj = words[key];
-      const wordText = wordObj.word.toLowerCase().trim();  // Normalizamos la palabra
-      if (wordText.includes(searchTerm)) {  // Verificamos si la palabra incluye el término de búsqueda
+      const wordText = wordObj.word.toLowerCase().trim();
+      if (wordText.includes(searchTerm)) {
         filtered[key] = wordObj;
       }
     });

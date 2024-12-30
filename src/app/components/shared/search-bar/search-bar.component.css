@@ -1,6 +1,8 @@
 .input-group {
   max-width: 60%;
   margin: 0 auto;
+  box-shadow: 10px 10px 10px gray;
+  border-radius: 10px;
 }
 
 .input-group .form-control {
@@ -15,5 +17,11 @@
 @media (max-width: 600px) {
   .container{
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .input-group {
+    max-width: 80%;
   }
 }

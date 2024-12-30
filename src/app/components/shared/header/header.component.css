@@ -5,7 +5,7 @@
   align-items: center;
   padding: 10px 0;
   background-color: #f8f9fa;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 0 10px 10px 0 gray;
   min-width: 100%;
   max-height: 10%;
 }
@@ -18,13 +18,17 @@
 }
 
 .title-container h1{
-margin-left: 10%;
-margin-right: 5%;
-cursor: pointer;
+  margin-left: 10%;
+  margin-right: 5%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.title-container h1:hover{
+  transform: scale(1.1);
 }
 
 .title-container img{
-width: 7%;
+  width: 7%;
 }
 
 .nav-container{
@@ -36,9 +40,14 @@ width: 7%;
 }
 
 .nav-container img{
-margin-right: 15%;
-width: 7%;
-cursor: pointer;
+  margin-right: 15%;
+  width: 7%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-container img:hover{
+  transform: scale(1.1);
 }
 
 header{
@@ -50,90 +59,89 @@ header{
 
 
 @media (max-width:667px) {
-.nav-container img{
-  margin-right: 15%;
-  width: 10%;
-  cursor: pointer;
-}
+  .nav-container img{
+    margin-right: 15%;
+    width: 10%;
+    cursor: pointer;
+  }
 
-.title-container img{
-  width: 10%;
-}
+  .title-container img{
+    width: 10%;
+  }
 }
 
 @media (max-width: 470px) {
-.nav-container img{
-  margin-right: 15%;
-  width: 15%;
-  cursor: pointer;
-}
+  .nav-container img{
+    margin-right: 15%;
+    width: 15%;
+    cursor: pointer;
+  }
 
-.title-container img{
-  width: 15%;
-}
+  .title-container img{
+    width: 15%;
+  }
 
-.title-container h1{
-  margin-left: 10%;
-  margin-right: 0%;
-  cursor: pointer;
-  width: 50%;
-}
+  .title-container h1{
+    margin-left: 10%;
+    margin-right: 0%;
+    cursor: pointer;
+    width: 50%;
+  }
 }
 
 @media (max-width: 400px) {
-.nav-container img{
-  margin-right: 15%;
-  width: 15%;
-  cursor: pointer;
-}
+  .nav-container img{
+    margin-right: 15%;
+    width: 15%;
+    cursor: pointer;
+  }
 
-.title-container img{
-  width: 15%;
-}
+  .title-container img{
+    width: 15%;
+  }
 
-.title-container h1{
-  margin-left: 10%;
-  margin-right: 2%;
-  cursor: pointer;
-}
+  .title-container h1{
+    margin-left: 10%;
+    margin-right: 2%;
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 360px) {
-.nav-container img{
-  margin-right: 15%;
-  width: 20%;
-  cursor: pointer;
-}
+  .nav-container img{
+    margin-right: 15%;
+    width: 20%;
+    cursor: pointer;
+  }
 
-.title-container img{
-  width: 20%;
-}
+  .title-container img{
+    width: 20%;
+  }
 
-.title-container h1{
-  margin-left: 10%;
-  margin-right: 2%;
-  cursor: pointer;
-  width: 60%;
+  .title-container h1{
+    margin-left: 10%;
+    margin-right: 2%;
+    cursor: pointer;
+    width: 60%;
 }
 
 }
 
 @media (max-width: 300px) {
-.nav-container img{
-  margin-right: 15%;
-  width: 25%;
-  cursor: pointer;
-}
+  .nav-container img{
+    margin-right: 15%;
+    width: 25%;
+    cursor: pointer;
+  }
 
-.title-container img{
-  width: 25%;
-}
+  .title-container img{
+    width: 25%;
+  }
 
-.title-container h1{
-  margin-left: 10%;
-  margin-right: 2%;
-  cursor: pointer;
-  width: 70%;
-}
-
+  .title-container h1{
+    margin-left: 10%;
+    margin-right: 2%;
+    cursor: pointer;
+    width: 70%;
+  }
 }
